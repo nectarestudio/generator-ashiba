@@ -1,0 +1,18 @@
+// Base template for font. Replace "Font Name Type", "font_name" and "FontName-Type"
+
+:root {
+  --font-name-type: "Font Name Type";
+}
+
+@font-face {
+  font-family: "Font Name Type";
+  src: url("../fonts/font_name/FontName-Type.eot");
+  src:
+    url("../fonts/font_name/FontName-Type.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/font_name/FontName-Type.woff2") format("woff2"),
+    url("../fonts/font_name/FontName-Type.woff") format("woff"),
+    url("../fonts/font_name/FontName-Type.ttf") format("truetype"),
+    url("../fonts/font_name/FontName-Type.svg#FontName-Type") format("svg");
+  font-weight: var(--font-weight-base);
+  font-style: normal;
+}

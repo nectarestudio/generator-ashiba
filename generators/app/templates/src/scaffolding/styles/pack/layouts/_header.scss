@@ -1,0 +1,251 @@
+:root {
+  --main-menu-height: 5.9375rem;
+  --menu-logo: 2.75rem;
+
+  @media all and (max-width: 1023.98px) {
+    --main-menu-height: 4.375rem;
+    --menu-logo: 2.2rem;
+  }
+}
+
+body.has-menu {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-header {  
+  width: 100%;
+  height: var(--main-menu-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--color-white);
+  z-index: 1000;
+}
+
+.main-header-spacer {
+  position: relative;
+  width: 100%;
+  height: var(--main-menu-height);
+}
+
+.menu-container {
+  height: 100%;
+
+  @media all and (max-width: 575.98px) {
+    padding-left: var(--padding-size-base);
+    padding-right: var(--padding-size-base);
+  }
+}
+
+.menu-logo {
+  height: var(--menu-logo);
+  width: 10.125rem;
+  min-width: 10.125rem;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("");
+}
+
+.menu-logo.for-mobile {
+  background-image: url("");
+}
+
+.main-menu {
+  @media all and (max-width: 1023.98px) {
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    padding-top: 0;
+    padding-left: var(--padding-size-base);
+    padding-right: var(--padding-size-base);
+    background-color: var(--color-black);
+    transition: left var(--transition-fast) var(--transition-easing);
+    z-index: 2000;
+
+    &.nav-open {
+      left: 0;
+    }
+
+    &:not(.nav-open) {
+      left:-100vw;
+      overflow: hidden;
+    }
+  }
+}
+
+.mobile-menu-header {
+  display: none;
+
+  @media all and (max-width: 1023.98px) {
+    display: block;
+    height: 4.375rem;
+  }
+}
+
+.mobile-menu-content {
+  @media all and (max-width: 1023.98px) {
+    padding-left: calc(var(--padding-size-uxl) * 2);
+  }
+
+  @media all and (max-width: 767.98px) {
+    padding-left: var(--padding-size-uxl);
+  }
+
+  @media all and (max-height: 568px) {
+    padding-left: var(--padding-size-md);
+  }
+}
+
+.main-nav {
+  @media all and (max-width: 1023.98px) {
+    margin-bottom: calc(var(--margin-size-block) / 2);
+  }
+
+  @media all and (max-height: 568px) {
+    display: block;
+    margin-bottom: calc(var(--margin-size-block) / 2.8);
+  }
+}
+
+.main-menu .menu-item {
+  margin-left: var(--margin-size-lg);
+  margin-right: var(--margin-size-lg);
+
+  a {
+    position: relative;
+    font-size: var(--font-size-base);
+    font-weight: $font-weight-normal;
+    line-height: var(--line-height-xl);
+    color: var(--color-black);
+    z-index: 100;
+  }
+
+  @media all and (max-width: 1023.98px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.main-menu .menu-item.current-menu-item {
+  a {
+    color: var(--color-grey);
+
+    &::after {
+      width: 100%;
+    }
+
+    @media all and (max-width: 1023.98px) {
+      color: var(--color-grey);
+    }
+  }
+}
+
+.main-menu .menu-item:first-of-type {
+  margin-left: 0;
+}
+
+.main-menu .menu-item:last-of-type {
+  margin-right: 0;
+}
+
+.main-menu .menu-item:hover {
+  a {
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.nav-container {
+  @media all and (max-width: 1023.98px) {
+    align-items: flex-start;
+  }
+}
+
+.mobile-menu-content {
+  @media all and (max-width: 1023.98px) {
+    padding-top: 5vh;
+  }
+
+  @media all and (max-height: 568px) {
+    padding-top: 3vh;
+  }
+}
+
+.mobile-menu-social-wrapper {
+  display: none;
+
+  @media all and (max-width: 1023.98px) {
+    display: block;
+  }
+
+  @media all and (max-width: 768.98px) {
+    display: block;
+  }
+}
+
+.mobile-menu-social-item {
+  margin-left: var(--margin-size-sm);
+  margin-right: var(--margin-size-sm);
+}
+
+.mobile-menu-social-item:first-of-type {
+  margin-left: 0;
+}
+
+.mobile-menu-social-item:last-of-type {
+  margin-right: 0;
+}
+
+.menu-right-wrapper .button-cta.button-cta--small {
+  @media all and (max-width: 1023.98px) {
+    height: 2.625rem;
+
+    .button__icon {
+      display: none;
+    }
+  }
+}
+
+.hamburguer-wrapper {
+  height: 100%;
+  margin-left: var(--margin-size-lg);
+  display: none;
+
+  @media all and (max-width: 1023.98px) {
+    display: block;
+  }
+}
+
+.hamburguer-container {
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.hamburguer {
+  height: 100% !important;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 1.875rem;
+  height: 0.875rem;
+  cursor: pointer;
+}
+
+.hamburguer-line {
+  width: inherit;
+  height: 2px;
+  background-color: var(--color-black);
+  margin-bottom: 5px;
+}
+
+.hamburguer-line:last-of-type {
+  margin-bottom: 0;
+}

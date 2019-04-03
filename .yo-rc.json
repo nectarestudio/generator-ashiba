@@ -1,0 +1,12 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "installswiper": false,
+      "installselect2": false,
+      "installgsap": false,
+      "installladda": false,
+      "installinview": false,
+      "installsmoothscroll": false
+    }
+  }
+}

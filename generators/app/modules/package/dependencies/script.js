@@ -1,0 +1,65 @@
+const extend = require('deep-extend')
+
+function addScriptDependencies(files = {}, context) {
+  extend(files.pkg, {
+    dependencies: {
+      "css-vars-ponyfill": "^1.16.4",
+    }
+  })
+
+  // Swiper
+  if (context.props.installswiper === true) {
+    extend(files.pkg, {
+      dependencies: {
+        "swiper": "^4.5.0"
+      }
+    })
+  }
+
+  // Select2
+  if (context.props.installselect2 === true) {
+    extend(files.pkg, {
+      dependencies: {
+        "select2": "^4.0.6-rc.1"
+      }
+    })
+  }
+
+  // GSAP
+  if (context.props.installgsap === true) {
+    extend(files.pkg, {
+      dependencies: {
+        "gsap": "^2.1.0"
+      }
+    })
+  }
+
+  // Inview
+  if (context.props.installinview === true) {
+    extend(files.pkg, {
+      dependencies: {
+        "inview": "^0.0.14"
+      }
+    })
+  }
+
+  // Lada
+  if (context.props.installladda === true) {
+    extend(files.pkg, {
+      dependencies: {
+        "ladda": "^2.0.1"
+      }
+    })
+  }
+
+  // Smoothscroll
+  if (context.props.installsmoothscroll === true) {
+    extend(files.pkg, {
+      dependencies: {
+        "smoothscroll-for-websites": "^1.4.9"
+      }
+    })
+  }
+}
+
+module.exports = addScriptDependencies

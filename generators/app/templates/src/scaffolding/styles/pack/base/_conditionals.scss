@@ -1,0 +1,34 @@
+.is-bold {
+  font-weight: $font-weight-bold;
+}
+
+.is-invisible {
+  display: none !important;
+}
+
+.is-hidden {
+  visibility: hidden;
+}
+
+.click--trigger,
+.click--trigger * {
+  cursor: pointer;
+}
+
+.is-hidden-mobile {
+  display: block;
+}
+
+.is-hidden-desktop {
+  display: none;
+}
+
+@media screen and (max-width: 1023.98px) {
+  .is-hidden-mobile {
+    display: none;
+  }
+
+  .is-hidden-desktop {
+    display: block;
+  }
+}

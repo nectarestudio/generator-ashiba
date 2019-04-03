@@ -1,0 +1,20 @@
+.sections-wrapper {
+  padding-top: var(--padding-size-section);
+  padding-bottom: var(--padding-size-section);
+}
+
+.section-block {
+  padding-top: var(--padding-size-block);
+  padding-bottom: var(--padding-size-block);
+}
+
+.section-main-header{
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+  margin-bottom: var(--margin-size-xxl);
+
+  @media all and (max-width: 575.98px) {
+    font-size: var(--font-size-h3);
+  }
+}
+

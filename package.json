@@ -1,0 +1,87 @@
+{
+  "name": "generator-ashiba",
+  "version": "0.0.1",
+  "description": "Nectar Estudio Yeoman Scaffolding System",
+  "homepage": "https://github.com/nectarestudio/generator-ashiba#readme",
+  "author": {
+    "name": "Nectar Estudio",
+    "email": "webmaster@nectarestudio.com",
+    "url": "www.nectarestudio.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nectarestudio/generator-ashiba.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nectarestudio/generator-ashiba/issues"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "scaffolding web",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-xo": "^0.25.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^1.2.0",
+    "jest": "^24.5.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.2",
+    "yeoman-assert": "^3.1.0",
+    "yeoman-test": "^1.7.0"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "dependencies": {
+    "yeoman-generator": "^2.0.1",
+    "chalk": "^2.1.0",
+    "yosay": "^2.0.1",
+    "clear-terminal": "^0.0.2",
+    "gradient-string": "^1.1.0",
+    "command-exists": "^1.2.7",
+    "sort-package-json": "^1.15.0",
+    "mkdirp": "^0.5.1",
+    "deep-extend": "^0.6.0",
+    "fs-extra": "^6.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest"
+  },
+  "license": "MIT"
+}

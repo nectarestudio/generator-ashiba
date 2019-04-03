@@ -1,0 +1,160 @@
+.flex-container {
+  width: 100%;
+  height: 100%;
+}
+
+.flex-auto {
+  height: auto;
+}
+
+.flex-inline {
+  display: inline-flex;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-row--toggle {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-row--reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-column--toggle {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-column--reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-reverse-wrap {
+  flex-wrap: wrap-reverse;
+}
+
+.justif-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.content-start {
+  align-content: flex-start;
+}
+
+.content-end {
+  align-content: flex-end;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.content-between {
+  align-content: space-between;
+}
+
+.content-around {
+  align-content: space-around;
+}
+
+.content-stretch {
+  align-content: stretch;
+}
+
+.flex-item {
+  flex: 0 0 auto;
+}
+
+.flex-double {
+  flex: 1 0 auto;
+}
+
+.flex-half {
+  flex: 1 0 50%;
+}
+
+.align-start {
+  align-self: flex-start;
+}
+
+.align-end {
+  align-self: flex-end;
+}
+
+.align-center {
+  align-self: center;
+}
+
+.align-baseline {
+  align-self: baseline;
+}
+
+.align-stretch {
+  align-self: stretch;
+}
+
+@media all and (max-width: 1023.98px) {
+  .flex-row--toggle {
+    flex-direction: column;
+  }
+
+  .flex-column--toggle {
+    flex-direction: row;
+  }
+}

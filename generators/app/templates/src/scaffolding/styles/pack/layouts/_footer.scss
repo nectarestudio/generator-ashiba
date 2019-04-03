@@ -1,0 +1,88 @@
+.main-footer {
+  height: 28.25rem;
+  width: 100%;
+  background-color: var(--color-grey-ultra-darker);
+  
+  @media all and (max-width: 1023.98px) {
+    text-align: center;
+  }
+
+  @media all and (max-width: 767.98px) {
+    height: 21.625rem;
+  }
+}
+
+.footer-container {
+  padding-top: var(--padding-size-block);
+  padding-bottom: var(--padding-size-block);
+}
+
+.footer-logo {
+  height: 2.75rem;
+  width: 8.625rem;
+  min-width: 8.625rem;
+  margin-bottom: var(--margin-size-xxl);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/svg/logo_galileo_white.svg");
+}
+
+.footer-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-base);
+  line-height: 1.6;;
+  color: var(--color-grey-dark);
+}
+
+.footer-address {
+  font-size: var(--font-size-xlg);
+  font-weight: var(--font-weight-base);
+  line-height: 1.6;;
+  color: var(--color-white);
+}
+
+.footer-social-wrapper {
+  margin-bottom: var(--margin-size-uxl);
+
+  @media all and (max-width: 767.98px) {
+    margin-bottom: calc(var(--margin-size-uxl) + 1.25rem);
+  }
+}
+
+.footer-social-item {
+  margin-left: var(--margin-size-sm);
+  margin-right: var(--margin-size-sm);
+}
+
+.footer-social-item:first-of-type {
+  margin-left: 0;
+}
+
+.footer-social-item:last-of-type {
+  margin-right: 0;
+}
+
+.footer-menu .menu-item a {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-base);
+  line-height: var(--line-height-lg);
+  color: var(--color-grey-dark);
+}
+
+.footer-menu .menu-item:hover a {
+  color: var(--color-white);
+}
+
+.footer-menu .menu-item--separator {
+  margin-left: var(--margin-size-base);
+  margin-right: var(--margin-size-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-base);
+  line-height: var(--line-height-lg);
+  color: var(--color-grey-dark);
+
+  &:last-of-type {
+    display: none;
+  }
+}

@@ -1,0 +1,197 @@
+:root {
+  --font-size-root: 16px;
+
+  // Base Font Size
+  --font-size-xs: 0.5rem;         // 8px
+  --font-size-sm: 0.75rem;        // 12px
+  --font-size-md: 0.875rem;       // 14px
+  --font-size-base: 1rem;         // 16px
+  --font-size-lg: 1.125rem;       // 18px
+  --font-size-xl: 1.25rem;        // 20px
+  --font-size-xxl: 1.5rem;        // 24px
+  --font-size-uxl: 1.75rem;       // 38px
+
+  // Headings Font Size
+  --font-size-h1: 5rem;           // 80px
+  --font-size-h2: 3.75rem;        // 60px
+  --font-size-h3: 3.125rem;       // 50px
+  --font-size-h4: 2.5rem;         // 40px
+  --font-size-h5: 1.875rem;       // 30px
+  --font-size-h6: 1.5rem;         // 24px
+
+  // Line Height
+  --line-height-font: 1;
+  --line-height-sm: 1.25;
+  --line-height-base: 1.5;
+  --line-height-lg: 1.75;
+  --line-height-xl: 2;
+  --line-height-h1: 1.125;
+  --line-height-h2: 1.23333333;
+  --line-height-h3: 1.2;
+  --line-height-h4: 1.25;
+  --line-height-h5: 1.23333333;
+  --line-height-h6: 1.25;
+
+  // Font Weight
+  --font-weight-light: 300;
+  --font-weight-base: 400;
+  --font-weight-medium: 500;
+
+  // Margin Size
+  --margin-size-xs: 0.25rem;      // 4px
+  --margin-size-sm: 0.5rem;       // 8px
+  --margin-size-md: 0.75rem;      // 12px
+  --margin-size-base: 1rem;       // 16px
+  --margin-size-lg: 1.5rem;       // 24px
+  --margin-size-xl: 1.75rem;      // 28px
+  --margin-size-xxl: 1.875rem;    // 30px
+  --margin-size-uxl: 2rem;        // 32px
+
+  // Padding Size
+  --padding-size-xs: 0.25rem;     // 4px
+  --padding-size-sm: 0.5rem;      // 8px
+  --padding-size-md: 0.75rem;     // 12px
+  --padding-size-base: 1rem;      // 16px
+  --padding-size-lg: 1.5rem;      // 24px
+  --padding-size-xl: 1.75rem;     // 28px
+  --padding-size-xxl: 1.875rem;   // 30px
+  --padding-size-uxl: 2rem;       // 32px
+
+  --padding-size-block: 3rem;     // 48px
+  --padding-size-section: 3rem;   // 120px;
+
+  // Border Width
+  --border-thinner: 1px;
+  --border-thin: 2px;
+  --border-thick: 4px;
+
+  // Border Radius
+  --border-radius-xs: 0.125rem;    // 2px
+  --border-radius-sm: 0.25rem;     // 4px
+  --border-radius-sm: 0.375rem;    // 6px
+  --border-radius-md: 0.5rem;      // 8px
+  --border-radius-base: 1rem;      // 16px 
+  --border-radius-full: 100%;
+
+  // Colors
+  --color-black: #000;
+  --color-grey-ultra-darker: #121212;
+  --color-grey-darker: #2c2c2c;
+  --color-grey-dark: #555;
+  --color-grey-medium: #999;
+  --color-grey: #bbb;
+  --color-grey-light: #d8d8d8;
+  --color-grey-lighter: #e4e4e4;
+  --color-grey-ultra-lighter: #f4f4f4;
+  --color-white: #fff;
+
+  --color-red: #ff1f00;
+
+  // Transitions Speed
+  --transition-ultrafast: 100ms;
+  --transition-fast: 200ms;
+  --transition-base: 300ms;
+  --transition-slow: 400ms;
+  --transition-ultra-slow: 600ms;
+
+  //Transition Type
+  --transition-linear: linear;
+  --transition-easing: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  // Z-Index
+  --body-z-index: 100;
+  --menu-z-index: 500;
+  --modal-z-index: 1000;
+}
+
+@media all and (max-width: 1023.98px) {
+  :root {
+    // Base Font Sizes
+    --font-size-xs: 0.5rem;       // 8px
+    --font-size-sm: 0.75rem;      // 12px
+    --font-size-md: 0.875rem;     // 14px
+    --font-size-base: 1rem;       // 16px
+    --font-size-lg: 1.125rem;     // 18px
+    --font-size-xl: 1.125rem;     // 20px --> 18px
+    --font-size-xxl: 1.25rem;     // 24px --> 20px
+    --font-size-uxl: 1.75rem;     // 38px
+
+    // Heading Font Sizes
+    --font-size-h1: 3.75rem;      // 80px --> 60px
+    --font-size-h2: 3.125rem;     // 60px --> 50px
+    --font-size-h3: 2.5rem;       // 50px --> 40px
+    --font-size-h4: 1.875rem;     // 40px --> 30px
+    --font-size-h5: 1.25rem;      // 30px --> 24px
+    --font-size-h6: 1.25rem;      // 24px --> 20px
+
+    // Margin Size
+    --margin-size-xs: 0.25rem;    // 4px
+    --margin-size-sm: 0.5rem;     // 8px
+    --margin-size-md: 0.75rem;    // 12px
+    --margin-size-base: 1.25rem;  // 16px
+    --margin-size-lg: 1.5rem;     // 24px
+    --margin-size-xl: 1.75rem;    // 28px
+    --margin-size-xxl: 1.875rem;  // 30px
+    --margin-size-uxl: 2rem;      // 32px
+
+
+    // Padding Size
+    --padding-size-xs: 0.25rem;   // 4px
+    --padding-size-sm: 0.5rem;    // 8px
+    --padding-size-md: 0.75rem;   // 12px
+    --padding-size-base: 1rem;    // 20px
+    --padding-size-lg: 1.5rem;    // 24px
+    --padding-size-xl: 1.75rem;   // 28px
+    --padding-size-xxl: 1.75rem;  // 28px
+    --padding-size-uxl: 2rem;     // 32px
+
+    --padding-size-block: 3.75rem;  // 60px
+    --padding-size-section: 5rem;   // 120px --> 80px
+  }
+}
+
+@media all and (max-width: 767.98px) {
+  :root {
+    // Base Font Sizes
+    --font-size-xs: 0.5rem;       // 8px
+    --font-size-sm: 0.75rem;      // 12px
+    --font-size-md: 0.875rem;     // 14px
+    --font-size-base: 1rem;       // 16px
+    --font-size-lg: 1.125rem;     // 18px
+    --font-size-xl: 1.125rem;     // 20px --> 18px
+    --font-size-xxl: 1.25rem;     // 24px --> 20px
+    --font-size-uxl: 1.75rem;     // 38px
+
+    // Heading Font Sizes
+    --font-size-h1: 2.5rem;       // 80px --> 60px --> 40px
+    --font-size-h2: 2.5rem;       // 60px --> 50px --> 40px
+    --font-size-h3: 1.875rem;     // 50px --> 40px --> 30px
+    --font-size-h4: 1.625rem;     // 40px --> 30px --> 26px
+    --font-size-h5: 1.25rem;      // 30px --> 24px
+    --font-size-h6: 1.25rem;      // 24px --> 20px
+
+    // Margin Size
+    --margin-size-xs: 0.25rem;    // 4px
+    --margin-size-sm: 0.5rem;     // 8px
+    --margin-size-md: 0.75rem;    // 12px
+    --margin-size-base: 1rem;     // 16px
+    --margin-size-lg: 1.5rem;     // 24px
+    --margin-size-xl: 1.75rem;    // 28px
+    --margin-size-xxl: 1.875rem;  // 30px
+    --margin-size-uxl: 2rem;      // 32px
+
+
+    // Padding Size
+    --padding-size-xs: 0.25rem;   // 4px
+    --padding-size-sm: 0.5rem;    // 8px
+    --padding-size-md: 0.75rem;   // 12px
+    --padding-size-base: 1.25rem; // 20px
+    --padding-size-lg: 1.5rem;    // 24px
+    --padding-size-xl: 1.75rem;   // 28px
+    --padding-size-xxl: 1.75rem;  // 28px
+    --padding-size-uxl: 2rem;     // 32px
+
+    --padding-size-block: 3.125rem;   // 60px --> 50px
+    --padding-size-section: 3.75rem;  // 120px --> 80px --> 60px
+  }
+}

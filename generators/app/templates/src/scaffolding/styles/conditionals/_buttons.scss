@@ -1,0 +1,353 @@
+.button {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: all var(--transition-fast) var(--transition-easing);
+
+  &[data-loading] {
+    pointer-events: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    transition: all var(--transition-fast) var(--transition-easing);
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    transition: all var(--transition-fast) var(--transition-easing);
+    z-index: 1;
+  }
+
+  .button__text {
+    
+    position: relative;
+    transition: all var(--transition-fast) var(--transition-easing);
+    z-index:4;
+  }
+
+  .button__icon {
+    position: relative;
+    transition: all var(--transition-fast) var(--transition-easing);
+    z-index:4;
+  }
+}
+
+.button::-moz-focus-inner {
+  border: 0;
+}
+
+.buttons-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button-container,
+.button-container--toggle {
+  display: flex;
+  flex-direction: row;
+}
+
+@media all and (max-width: 767.98px) {
+  .button-container--toggle {
+    flex-direction: column;
+  }
+}
+
+.button--left,
+.button--right {
+  justify-content: center;
+  width: 15rem;
+}
+
+.button--left .button__icon {
+  margin-left: 0 !important;
+  margin-right: var(--margin-size-base) !important;
+}
+
+.button--right .button__icon {
+  margin-left: var(--margin-size-base) !important;
+  margin-right: 0 !important;
+}
+
+.button--round {
+  border-radius: var(--border-radius-xs);
+
+  &::before,
+  &::after {
+    border-radius: var(--border-radius-xs);
+  }
+}
+
+.button--rounder {
+  border-radius: var(--border-radius-uxl);
+
+  &::before,
+  &::after {
+    border-radius: var(--border-radius-uxl);
+  }
+}
+
+.button--roundest {
+  border-radius: 3rem;
+
+  &::before,
+  &::after {
+    border-radius: 3rem;
+  }
+}
+
+.button--border-thinner,
+.button--border-thin,
+.button--border-thick {
+  border-style: solid;
+}
+
+.button--border-thinner {
+  border-width: var(--border-thinner);
+}
+
+.button--border-thin {
+  border-width: var(--border-thin);
+}
+
+.button--border-thick {
+  border-width: var(--border-thick);
+}
+
+.button__icon {
+  height: 100% !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  line-height: var(--line-height-font);
+}
+
+.button-example {
+  height: 3.75rem;
+  padding-left: var(--padding-size-xl);
+  padding-right: var(--padding-size-xl);
+  background-color: var(--color-grey);
+
+  &::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-grey-light);
+    opacity: 0;
+  }
+
+  .button__text {
+    font-size: var(--font-size-base);
+    color: var(--color-white);
+  }
+
+  .button__icon {
+    font-size: var(--font-size-button-icon);
+    margin-left: var(--margin-size-sm);
+    color: var(--color-white);
+  }
+}
+
+.button-example:hover {
+  &::before {
+    opacity: 1;
+  }
+}
+
+// Button Example Small
+.button-example.button-example--small {
+  height: 3.125rem;
+}
+
+// Button Example Big
+.button-example.button-example--big {
+  height: 5rem;
+  background-color: var(--color-grey);
+
+  .button__text {
+    font-size: var(--font-size-lg);
+    color: var(--color-white);
+  }
+
+  .button__icon {
+    font-size: var(--font-size-button-icon);
+    margin-left: var(--margin-size-sm);
+    color: var(--color-white);
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-grey-dark);
+    opacity: 1;
+  }
+}
+
+.button-example.button-example--big:hover {
+  &::before {
+    opacity: 0.7;
+  }
+}
+
+.button-example.button-example--big.is-disabled {
+  &::before {
+    opacity: 0;
+  }
+}
+
+.button-example.button-example--big.is-disabled:hover {
+  opacity: 0.7;
+
+  &::before {
+    opacity: 0;
+  }
+}
+
+// Button Example Ghost
+.button-example.button--ghost , 
+.button-example.button--ghost-inverse,
+.button-example.button--ghost-black {
+  background-color: transparent;
+  border-style: solid;
+  border-width: var(--border-thin);
+  border-color: var(--color-white);
+
+  &::before {
+    top: -1px;
+    left: -1px;
+    width: 101%;
+    height: 102%;
+    background-color: var(--color-white);
+    opacity: 0;
+  }
+}
+
+.button-example.button--ghost-inverse {
+  border-color: var(--color-grey);
+  
+  .button__text {
+    color: var(--color-grey);
+  }
+  .button__icon {
+    color: var(--color-grey);
+  }
+}
+
+.button-example.button--ghost-inverse::before {
+  background-color: var(--color-grey);
+}
+
+.button-example.button--ghost-black {
+  border-color: var(--color-black);
+  border-width: var(--border-thinner);
+  padding-left: var(--padding-size-lg);
+  padding-right: var(--padding-size-xl);
+  height: 2.625rem;
+  
+  .button__text {
+    
+    font-weight: var(--font-weight-base);
+    color: var(--color-black);
+    margin-right: 0;
+  }
+  .button__icon {
+    color: var(--color-black);
+    margin-right: var(--margin-size-sm);
+    margin-left: 0;
+  }
+}
+
+.button-example.button--ghost-black::before {
+  background-color: var(--color-black);
+}
+
+.button-example.button--ghost:hover {
+  &::before {
+    opacity: 1;
+  }
+
+  .button__text {
+    color: var(--color-grey);
+  }
+
+  .button__icon {
+    color: var(--color-grey);
+  }
+}
+
+.button-example.button--ghost-inverse:hover {
+  &::before {
+    opacity: 1;
+  }
+
+  .button__text {
+    color: var(--color-white);
+  }
+
+  .button__icon {
+    color: var(--color-white);
+  }
+}
+
+.button-example.button--ghost-black:hover {
+  &::before {
+    opacity: 1;
+  }
+
+  .button__text {
+    color: var(--color-white);
+  }
+
+  .button__icon {
+    color: var(--color-white);
+  }
+}
+
+// Button Social
+.button-social {
+  width: 3rem;
+  height: 3rem;
+  justify-content: center;
+  background-color: transparent;
+
+  .button__icon {
+    font-size: var(--font-size-base);
+    color: var(--color-grey-dark);
+  }
+}
+
+.button-social:hover {
+  .button__icon {
+    color: var(--color-white);
+  }
+}
+
+// Button reset classes (ALWAYS at the bottom) !!IMPORTANT
+
+.button--full {
+  width: 100%;
+}
+
+.button--clear,
+.button--clear:hover {
+  background-color: transparent;
+  border: none;
+}
+
+.is-disabled .button,
+.is-disabled a {
+  pointer-events: none;
+  cursor: not-allowed;
+}

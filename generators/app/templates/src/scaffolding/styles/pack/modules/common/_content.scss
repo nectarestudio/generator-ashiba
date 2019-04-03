@@ -1,0 +1,204 @@
+:root {
+  --padding-size-content-block: 5.625rem;
+  --padding-size-content-slider: 4.25rem;
+  --margin-size-wysiwyg-elements: 2.5rem;
+  --margin-size--wysiwyg-headers: 1.5rem;
+
+  @media all and (max-width: 1023.98px) {
+    --padding-size-content-block: 3.5rem;
+    --padding-size-content-slider: 1.875rem;
+  }
+
+  @media all and (max-width: 767.98px) {
+    --padding-size-content-block: 3rem;
+    --margin-size-wysiwyg-elements: 2rem;
+    --margin-size--wysiwyg-headers: 1rem;
+  }
+}
+
+@media all and (max-width: 575.98px) {
+  .container {
+    padding-left: var(--padding-size-base);
+    padding-right: var(--padding-size-base);
+  }
+}
+
+.content-block {
+  position: relative;
+  padding-bottom: var(--padding-size-content-block);
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 47.75rem;
+    min-height: 17rem;
+    object-fit: cover;
+  }
+}
+
+.content-block {
+  &.wysiwyg-block p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.wysiwyg-block, body#tinymce {
+  h1 {
+    font-size: var(--font-size-h5);
+    margin-bottom: var(--margin-size--wysiwyg-headers);
+    color: var(--color-black);
+    
+    strong{
+      font-weight:normal;
+    }
+  }
+
+  h2 {
+    font-size: var(--font-size-h5);
+    margin-bottom: var(--margin-size--wysiwyg-headers);
+    color: var(--color-black);
+    margin-bottom: var(--margin-size-lg);
+    
+    strong{
+      font-weight:normal;
+    }
+  }
+
+  h3 {
+    font-size: var(--font-size-h5);
+    line-height: var(--line-height-base);
+    color: var(--color-black);
+    margin-bottom: var(--margin-size--wysiwyg-headers);
+    
+    strong{
+      font-weight:normal;
+    }
+  }
+
+  p {
+    font-size: var(--font-size-xlg);
+    line-height: var(--line-height-lg);
+    color: var(--color-black);
+    margin-bottom: var(--margin-size-wysiwyg-elements) !important;
+  }
+
+  ul, ol {
+    list-style-type: disc;
+    margin-bottom: var(--margin-size-wysiwyg-elements) !important;
+    margin-left: var(--margin-size-wysiwyg-elements);
+    margin-top: -1rem;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li {
+    font-size: var(--font-size-xxl);
+    line-height: var(--line-height-lg);
+    color: var(--color-black);
+    margin-bottom: var(--margin-size-base);
+  }
+
+  ul.big--gap, ol.big--gap {
+    li {
+      margin-bottom: var(--margin-size-wysiwyg-elements);
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  table {
+    border-collapse: collapse;
+
+    th,
+    td {
+      border-style: solid;
+      border-width: 1px;
+      border-color: var(--color-black);
+    }
+  }
+
+  th,
+  td {
+    font-size: var(--font-size-xlg);
+    line-height: var(--line-height-base);
+    color: var(--color-black);
+    vertical-align: top;
+    padding-top: var(--padding-size-md);
+    padding-bottom: var(--padding-size-md);
+    padding-left: var(--padding-size-lg);
+    padding-right: var(--padding-size-lg);
+  }
+
+  a {
+    text-decoration: none;
+    font-size: var(--font-size-xlg);
+    line-height: var(--line-height-base);
+    color: var(--color-grey-dark);
+    transition: all var(--transition-fast) var(--transition-easing);
+  }
+
+  a:hover {
+    color: var(--color-grey);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 47.75rem;
+    object-fit: cover;
+  }
+
+  .table-responsive{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    overflow-x: auto;
+    margin-bottom: var(--margin-size-wysiwyg-elements);
+  }
+}
+
+.text--bold {
+  font-weight: bold;
+}
+
+.text--underline {
+  text-decoration-line: underline;
+}
+
+.content__image--full img,
+.content__image--double img,
+.content__video iframe {
+  width: 100%;
+  height: auto;
+}
+
+.image-double-wrap:first-of-type {
+  padding-right: var(--padding-size-xl);
+
+  @media all and (max-width: 1023px) {
+    padding-right: var(--padding-size-base);
+  }
+  
+  @media all and (max-width: 767.98px) {
+    padding-right: 0;
+    margin-bottom: calc(var(--padding-size-base) - 3px);
+  }
+}
+
+.image-double-wrap:last-of-type {
+  padding-left: var(--padding-size-xl);
+
+  @media all and (max-width: 1023px) {
+    padding-left: var(--padding-size-base);
+  }
+
+  @media all and (max-width: 767.98px) {
+    padding-left: 0;
+  }
+}

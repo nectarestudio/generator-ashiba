@@ -1,0 +1,144 @@
+
+.checkbox-group {
+  list-style: none
+}
+
+.checkbox-group,
+ul.gfield_checkbox {
+  padding-left: var(--padding-size-xs) !important
+}
+
+.checkbox-group li,
+ul.gfield_checkbox li {
+  overflow: visible !important
+}
+
+.checkbox-group .checkbox-item input[type=checkbox],
+ul.gfield_checkbox li input[type=checkbox] {
+  visibility: hidden
+}
+
+.checkbox-group .checkbox-item input[type=checkbox]+label,
+ul.gfield_checkbox li input[type=checkbox]+label {
+  position: relative;
+  font-size: var(--font-size-base);
+  line-height: 2rem;
+  color: var(--color-black)
+}
+
+.checkbox-group .checkbox-item input[type=checkbox]+label:before,
+ul.gfield_checkbox li input[type=checkbox]+label:before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -18px;
+  width: 6px;
+  height: 12px;
+  border-color: var(--color-white);
+  border-style: none solid solid none;
+  border-width: 2px;
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  opacity: 0;
+  z-index: 2;
+  -webkit-transition: all var(--transition-slow) var(--transition-easing);
+  -o-transition: all var(--transition-slow) var(--transition-easing);
+  transition: all var(--transition-slow) var(--transition-easing);
+}
+
+.checkbox-group .checkbox-item input[type=checkbox]+label:after,
+ul.gfield_checkbox li input[type=checkbox]+label:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -24px;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 2px solid var(--color-grey-light);
+  border-radius: .125rem;
+  z-index: 1;
+  -webkit-transition: all var(--transition-slow) var(--transition-easing);
+  -o-transition: all var(--transition-slow) var(--transition-easing);
+  transition: all var(--transition-slow) var(--transition-easing);
+}
+
+.checkbox-group .checkbox-item input[type=checkbox]+label:before {
+  top: 0
+}
+
+.checkbox-group .checkbox-item input[type=checkbox]+label:after {
+  top: -1px
+}
+
+.checkbox-group .checkbox-item input[type=checkbox]:checked+label:before,
+ul.gfield_checkbox li input[type=checkbox]:checked+label:before {
+  opacity: 1
+}
+
+.checkbox-group .checkbox-item input[type=checkbox]:checked+label:after,
+ul.gfield_checkbox li input[type=checkbox]:checked+label:after {
+  background-color: var(--color-purple);
+  border-color: var(--color-purple)
+}
+
+.checkbox-group .checkbox-item input[type=checkbox]:checked+label,
+ul.gfield_checkbox li input[type=checkbox]:checked+label {
+  font-weight: var(--font-weight-base) !important
+}
+
+.checkbox-group .checkbox-item input[type=checkbox]+label a,
+ul.gfield_checkbox li input[type=checkbox]+label a {
+  position: relative;
+  
+  font-size: var(--font-size-base);
+  line-height: 2rem;
+  color: var(--color-black);
+  z-index: 3
+}
+
+.checkbox-group .checkbox-item input[type=checkbox]+label a:before,
+ul.gfield_checkbox li input[type=checkbox]+label a:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-grey);
+  -webkit-transition: width var(--transition-slow) var(--transition-easing);
+  -o-transition: width var(--transition-slow) var(--transition-easing);
+  transition: width var(--transition-slow) var(--transition-easing);
+  z-index: 2
+}
+
+.checkbox-group .checkbox-item input[type=checkbox]+label a:after,
+ul.gfield_checkbox li input[type=checkbox]+label a:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-black);
+  -webkit-transition: width var(--transition-slow) var(--transition-easing);
+  -o-transition: width var(--transition-slow) var(--transition-easing);
+  transition: width var(--transition-slow) var(--transition-easing);
+  z-index: 1
+}
+
+.checkbox-group .checkbox-item input[type=checkbox]+label a:hover,
+ul.gfield_checkbox li input[type=checkbox]+label a:hover {
+  color: var(--color-grey)
+}
+
+.checkbox-group .checkbox-item input[type=checkbox]+label a:hover:before,
+ul.gfield_checkbox li input[type=checkbox]+label a:hover:before {
+  width: 100%
+}
+
+.checkbox-group .checkbox-item input[type=checkbox]:checked+label a,
+.gform_wrapper ul.gfield_radio li input[type=radio]:checked+label,
+ul.gfield_checkbox li input[type=checkbox]:checked+label a {
+  font-weight: var(--font-weight-base) !important
+}

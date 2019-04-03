@@ -1,0 +1,128 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+canvas {
+  pointer-events: none !important;
+}
+
+.gform_wrapper {
+  .gfield_required {
+    color: unset !important;
+    margin: 0 !important;
+  }
+
+  li.is-checkbox {
+    .gfield_label {
+      display: none !important;
+    }
+  }
+  
+  li.gfield.gfield_error {
+    margin-bottom: var(--margin-size-lg) !important;
+
+    input, textarea {
+      margin-bottom: 0 !important;
+    }
+
+    &.is-checkbox {
+      label {
+        color: var(--color-red);
+      }
+    }
+  }
+
+  .validation_error {
+    display: none;
+  }
+  
+  .validation_message {
+    display: none;
+  }
+}
+
+body .gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half) {
+  max-width: 100% !important;
+  width: 100%;
+}
+
+body .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container, 
+body .gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label {
+  margin-top: 8px;
+}
+
+<% if (installladda === true) { %>
+/* LADDA */
+.ladda-label {
+  display: flex;
+}
+
+.ladda-button[data-style=expand-left][data-loading] .ladda-spinner {
+  left: 50px;
+}
+
+.ladda-button[disabled], .ladda-button[data-loading] {
+  border: none !important;
+  padding-left: 74px !important;
+}
+
+.button-load-more-container {
+  .ladda-button[disabled], .ladda-button[data-loading] {
+    background: transparent;
+  }
+
+  .button-section[data-loading] {
+    &::before {
+      width: 100%;
+      background-color: var(--color-grey-lighter)
+    }
+  }
+}
+
+.ladda-button.button-cta[disabled], .ladda-button.button-cta[data-loading] {
+  background: var(--color-grey);
+
+  .button__text {
+    line-height: var(--line-height-sm);
+  }
+}
+<% } %>
