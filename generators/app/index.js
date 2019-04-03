@@ -2,7 +2,6 @@
 'use strict';
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
-const clear = require('clear-terminal')
 const commandExists = require('command-exists')
 const gradient = require('gradient-string')
 
@@ -18,6 +17,10 @@ const writeConfigJson = require('./modules/writing/configJSON')
 
 // Copy Source Files
 const copySources = require('./modules/writing/copySources')
+
+// Delete Target Files
+const deleteRemoteFile = require('./modules/deleting/deleteRemoteFile')
+const deleteRemoteFolder = require('./modules/deleting/deleteRemoteFolder')
 
 module.exports = class extends Generator {
   constructor (args, opts) {
@@ -36,6 +39,10 @@ module.exports = class extends Generator {
 
     // Copy Sources
     this.copySources = copySources.bind(this)
+
+    // Delete Remote
+    this.deleteRemoteFile = deleteRemoteFile.bind(this)
+    this.deleteRemoteFolder = deleteRemoteFolder.bind(this)
 
     // Command Checks
     this.commands = {
@@ -84,11 +91,6 @@ module.exports = class extends Generator {
                     {hex('#c9c9c9') -------------- {hex('#00ffd8') scaffolding system} --------------}
                     {bold URL:} {hex('#00ffd8') https://github.com/nectarestudio/ashiba}
     `
-
-    // Have Yeoman greet the user.
-    if (process.env.NODE_ENV !== 'test') {
-      clear()
-    }
   
     this.log(logo)
     this.log(version)
@@ -118,6 +120,11 @@ module.exports = class extends Generator {
     // Copy Source Files and Folders
     this.log(`${chalk.magenta('Copying template sources')}`)
     this.copySources().writing(this)
+
+    // Clean Remote Files and Folders
+    this.log(`${chalk.magenta('Cleaning Remote')}`)
+    this.deleteRemoteFile().deleting(this)
+    this.deleteRemoteFolder().deleting(this)
   }
 
   install() {
@@ -131,9 +138,6 @@ module.exports = class extends Generator {
   }
 
   end () {
-    if (process.env.NODE_ENV !== 'test') {
-      clear()
-    }
     var footerMessage = gradient.retro(`
                                     dP       oo dP                                 
                                     88          88                                 

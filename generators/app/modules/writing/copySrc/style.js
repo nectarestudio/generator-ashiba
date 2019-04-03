@@ -2,8 +2,8 @@ const styles = context => {
   return {
     files: [
       {
-        src: 'src/scaffolding/styles/_main.scss',
-        dest: 'resources/assets/styles/_main.scss'
+        src: 'src/scaffolding/styles/main.scss',
+        dest: 'resources/assets/styles/main.scss'
       },
       {
         src: 'src/scaffolding/styles/_variables.scss',
