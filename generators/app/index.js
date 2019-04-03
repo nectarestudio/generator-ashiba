@@ -1,7 +1,8 @@
 /* eslint-disable prettier/prettier */
 'use strict';
-const Generator = require('yeoman-generator');
-const chalk = require('chalk');
+const Generator = require('yeoman-generator')
+const chalk = require('chalk')
+const clear = require('clear-terminal')
 const commandExists = require('command-exists')
 const gradient = require('gradient-string')
 
@@ -69,6 +70,9 @@ module.exports = class extends Generator {
   }
 
   prompting() {
+    if (process.env.NODE_ENV !== 'test') {
+      clear()
+    }
   
     // Welcome Message
     var logo = gradient.retro(`
@@ -138,6 +142,9 @@ module.exports = class extends Generator {
   }
 
   end () {
+    if (process.env.NODE_ENV !== 'test') {
+      clear()
+    }
     var footerMessage = gradient.retro(`
                                     dP       oo dP                                 
                                     88          88                                 
@@ -146,11 +153,11 @@ module.exports = class extends Generator {
                   88.  .88       88 88    88 88 88.  .88 88.  .88                  
                   '88888P8 '88888P' dP    dP dP 88Y8888' '88888P8               
   `)
-    var goodbye = chalk`                   {hex('#00ffd8') The Generator is finished.}
-    `
+    var goodbye = gradient.retro(`                                  All systems ready!`)
     goodbye += '\n'
 
-    goodbye += chalk`                   {hex('#94ff00').bold Happy Coding.}`
+    goodbye += gradient.retro(`                                     Happy Coding`)
+    goodbye += '\n'
 
     this.log(footerMessage)
     this.log(goodbye)

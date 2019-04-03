@@ -6,7 +6,9 @@ const style = require('./deleteTarget/style.js')
 const script = require('./deleteTarget/script.js')
 
 const deleteAction = (data, context) => {
-  fse.rmdirSync(context.destinationPath(data.target))
+  if (fse.existsSync(context.destinationPath(data.target))) {
+    fse.rmdirSync(context.destinationPath(data.target))
+  }
 }
 
 const checkCondition = (data, context) => {
