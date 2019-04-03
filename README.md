@@ -3,7 +3,6 @@
 ![](https://img.shields.io/npm/v/generator-ashiba.svg?style=flat)
 ![](https://img.shields.io/david/nectarestudio/generator-ashiba.svg?style=flat)
 ![](https://img.shields.io/npm/dt/generator-ashiba.svg?style=flat)
-![](https://img.shields.io/bundlephobia/min/generator-ashiba.svg?style=flat)
 
 Nectar Estudio Yeoman Scaffolding generator for roots/sage
 
