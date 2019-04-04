@@ -30,4 +30,4 @@ yo ashiba
 
 ## License
 
-MIT © [Nectar Estudio](www.nectarestudio.com)
+MIT © [Nectar Estudio](https://www.nectarestudio.com)

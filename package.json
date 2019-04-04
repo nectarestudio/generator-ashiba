@@ -6,7 +6,7 @@
   "author": {
     "name": "Nectar Estudio",
     "email": "webmaster@nectarestudio.com",
-    "url": "www.nectarestudio.com"
+    "url": "https://www.nectarestudio.com"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   ],
   "main": "generators/index.js",
   "keywords": [
+    "sage",
     "scaffolding web",
     "yeoman-generator"
   ],

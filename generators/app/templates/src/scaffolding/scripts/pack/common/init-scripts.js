@@ -2,7 +2,7 @@
 import { detectAdminBar } from './detect-wp-bar'
 import { actionButtonsControl } from './action-buttons'
 <% if (installinview === true) { %>import { inViewport } from './in-viewport'<% } %>
-<% if (installsmoothscroll === true) { %>import { SmoothScroll}  from 'smoothscroll-for-websites'<% } %>
+<% if (installsmoothscroll === true) { %>import * as SmoothScroll from 'smoothscroll-for-websites'<% } %>
 
 
 export function initialize() {
