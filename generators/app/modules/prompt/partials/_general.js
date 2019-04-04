@@ -1,46 +1,7 @@
-const chalk = require('chalk')
 const message = require('../helpers/message')
 
 const generalPrompts = context => {
   return [
-    {
-      type: 'input',
-      name: 'projectname',
-      message: message({
-        headline: 'Project Name',
-        description: 'Please give the project a name (without Spaces)',
-        defaultValue: false
-      }),
-      default() {
-        return process
-          .cwd()
-          .replace('\\', '/')
-          .split('/')
-          .pop(-1)
-          .toLowerCase()
-          .replace(/[^a-zA-Z0-9]/g, '')
-      },
-      validate(input) {
-        // Do async stuff
-        if (input.indexOf(' ') >= 0 ||/[~`!#$%^&*+=[\]\\';,/{}|\\":<>?]/g.test(input)) {
-          // Pass the return value in the done callback
-          return chalk`{red No whitespaces or special-chars allowed!}`
-        }
-        return true
-      },
-      store: false
-    },
-    {
-      type: 'input',
-      name: 'projectversion',
-      message: message({
-        headline: 'Project Version',
-        description: 'Version Number:',
-        defaultValue: false
-      }),
-      default: '0.0.1',
-      store: true
-    },
     {
       type: 'list',
       name: 'installswiper',
