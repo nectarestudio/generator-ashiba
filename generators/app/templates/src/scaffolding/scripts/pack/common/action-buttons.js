@@ -2,7 +2,7 @@ import { mobileMenu } from './mobile-menu'
 import { modalControl } from './modal-control'
 
 export function actionButtonsControl(trigger) {
-  if (document.getElementsByClassName(trigger).length != 0) {
+  if (document.getElementsByClassName(trigger).length !== 0) {
   let triggerButton = document.getElementsByClassName(trigger)
 
     Array.prototype.forEach.call(triggerButton, function(element) {

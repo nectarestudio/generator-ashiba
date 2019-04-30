@@ -9,7 +9,7 @@ export function swiperBasicInit(
   prevButton,
   nextButton
 ) {
-  if ($(mainContainer).length != 0) {
+  if ($(mainContainer).length !== 0) {
     swiperBasicObject = new Swiper(mainContainer, {
       // Optional parameters
       direction: swiperDirection,
@@ -58,7 +58,7 @@ export function swiperMultiInit(
   prevButton,
   nextButton
 ) {
-  if ($(mainContainer).length != 0) {
+  if ($(mainContainer).length !== 0) {
     swiperMultiObject = new Swiper(mainContainer, {
       // Optional parameters
       direction: swiperDirection,

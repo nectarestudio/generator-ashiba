@@ -1,5 +1,5 @@
 export function imageRatio(trigger, ratio) {
-  if ($(trigger).length != 0) {
+  if ($(trigger).length !== 0) {
     $(trigger).each(function () {
       let targetWidth = $(this).width()
       let targetHeight = targetWidth * ratio

@@ -2,7 +2,7 @@ import { InView } from 'inview'
 import { TweenMax, Power1 } from 'gsap/TweenMax'
 
 export function inViewport(target, offset) {
-  if ($(target).length != 0) {
+  if ($(target).length !== 0) {
     $(target).each(function () {
       let that = this
       var inview = InView(this, function (isInView, data) {

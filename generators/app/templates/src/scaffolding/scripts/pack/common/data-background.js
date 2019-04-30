@@ -1,5 +1,5 @@
 export function dataBackground(trigger) {
-  if ($(trigger).length != 0) {
+  if ($(trigger).length !== 0) {
     $(trigger).each(function() {
       let backgroundUrl = $(this).data('background')
       $(this).css('background-image', 'url(' + backgroundUrl +')')
@@ -11,7 +11,7 @@ export function dataBackground(trigger) {
 }
 
 export function dataBackgroundColor(trigger, elementBefore) {
-  if ($(trigger).length != 0) {
+  if ($(trigger).length !== 0) {
     $(trigger).each(function() {
       let background = $(this).data('background-color')
       console.log(background)

@@ -1,5 +1,5 @@
 export function inputInit(targetElement) {
-  if ($(targetElement).length != 0) {
+  if ($(targetElement).length !== 0) {
     $(targetElement).each(function () {
       let targetParent = $(targetElement).closest('.form-field')
       if (targetElement.value !== '') {
@@ -13,7 +13,7 @@ export function inputInit(targetElement) {
 }
 
 export function inputInitGravity(targetElement) {
-  if ($(targetElement).length != 0) {
+  if ($(targetElement).length !== 0) {
     $(targetElement).each(function () {
       let targetParent = $(targetElement).closest('.gfield')
       if (targetElement.value !== '') {
