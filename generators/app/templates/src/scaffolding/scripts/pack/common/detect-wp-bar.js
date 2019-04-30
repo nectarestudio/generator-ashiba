@@ -1,8 +1,15 @@
 export function detectAdminBar(target) {
-  let wpAdminbar = document.getElementById(target)
-  let wpAdminbarHeight = 0;
-  if(wpAdminbar != null) {
-    wpAdminbarHeight = wpAdminbar.offsetHeight
+  if ( $(target).length != 0) {
+    let wpAdminbar = document.getElementById(target)
+    let wpAdminbarHeight = 0;
+    if(wpAdminbar != null) {
+      wpAdminbarHeight = wpAdminbar.offsetHeight
+    }
+
+    if($('.main-header').length != 0) {
+      $('.main-header').css('top', wpAdminbarHeight)
+    }
+  } else {
+    return
   }
-  $('.main-header').css('top', wpAdminbarHeight)
 }

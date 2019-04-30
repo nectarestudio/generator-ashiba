@@ -4,16 +4,16 @@ import { actionButtonsControl } from './action-buttons'
 <% if (installinview === true) { %>import { inViewport } from './in-viewport'<% } %>
 <% if (installsmoothscroll === true) { %>import * as SmoothScroll from 'smoothscroll-for-websites'<% } %>
 
-
 export function initialize() {
   // Detect if wp admin bar is active
-  if ($('#wpadminbar').length != 0) {
-    detectAdminBar('wpadminbar')
-  }
+  detectAdminBar('wpadminbar')
 
-  if ($('.click--trigger').length != 0) {
-    actionButtonsControl('click--trigger')
-  }
+  // Init action buttons controller
+  actionButtonsControl('click--trigger')
+
+  // Selector background-image loader as data
+  dataBackground('.background--trigger')
+
   <% if (installsmoothscroll === true) { %>
   SmoothScroll({
     frameRate: 60,
@@ -30,8 +30,6 @@ export function initialize() {
   })
   <% } %>
   $(window).on('load', function() {
-    if ($('.inview--trigger').length != 0) {
-      inViewport('.inview--trigger', 90)
-		}
-  })
+    inViewport('.inview--trigger', 90)
+  }
 }
