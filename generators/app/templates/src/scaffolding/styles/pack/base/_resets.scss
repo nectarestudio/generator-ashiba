@@ -56,7 +56,7 @@ canvas {
       display: none !important;
     }
   }
-  
+
   li.gfield.gfield_error {
     margin-bottom: var(--margin-size-lg) !important;
 
@@ -115,7 +115,7 @@ body .gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield
   .button-section[data-loading] {
     &::before {
       width: 100%;
-      background-color: var(--color-grey-lighter)
+      background-color: var(--color-grey-lighter);
     }
   }
 }
