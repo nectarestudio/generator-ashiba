@@ -26,16 +26,15 @@
   }
 
   .button__text {
-    
     position: relative;
     transition: all var(--transition-fast) var(--transition-easing);
-    z-index:4;
+    z-index: 4;
   }
 
   .button__icon {
     position: relative;
     transition: all var(--transition-fast) var(--transition-easing);
-    z-index:4;
+    z-index: 4;
   }
 }
 
@@ -216,7 +215,7 @@
 }
 
 // Button Example Ghost
-.button-example.button--ghost , 
+.button-example.button--ghost,
 .button-example.button--ghost-inverse,
 .button-example.button--ghost-black {
   background-color: transparent;
@@ -236,7 +235,7 @@
 
 .button-example.button--ghost-inverse {
   border-color: var(--color-grey);
-  
+
   .button__text {
     color: var(--color-grey);
   }
@@ -255,9 +254,8 @@
   padding-left: var(--padding-size-lg);
   padding-right: var(--padding-size-xl);
   height: 2.625rem;
-  
+
   .button__text {
-    
     font-weight: var(--font-weight-base);
     color: var(--color-black);
     margin-right: 0;

@@ -13,7 +13,6 @@
 */
 <% if (installswiper === true) { %>@import url("~swiper/dist/css/swiper.css");<% } %>
 <% if (installladda === true) { %>@import url("~ladda/dist/ladda.min.css");<% } %>
-
 /** Import Vendor components **/
 @import "vendor/vendor";
 

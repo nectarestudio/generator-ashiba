@@ -2,7 +2,7 @@
   height: 28.25rem;
   width: 100%;
   background-color: var(--color-grey-ultra-darker);
-  
+
   @media all and (max-width: 1023.98px) {
     text-align: center;
   }
@@ -25,20 +25,20 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("../images/svg/logo_galileo_white.svg");
+  background-image: url("");
 }
 
 .footer-title {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-base);
-  line-height: 1.6;;
+  line-height: 1.6;
   color: var(--color-grey-dark);
 }
 
 .footer-address {
   font-size: var(--font-size-xlg);
   font-weight: var(--font-weight-base);
-  line-height: 1.6;;
+  line-height: 1.6;
   color: var(--color-white);
 }
 

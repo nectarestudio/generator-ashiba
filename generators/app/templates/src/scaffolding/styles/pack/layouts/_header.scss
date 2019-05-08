@@ -14,7 +14,7 @@ body.has-menu {
   overflow: hidden;
 }
 
-.main-header {  
+.main-header {
   width: 100%;
   height: var(--main-menu-height);
   position: fixed;
@@ -72,7 +72,7 @@ body.has-menu {
     }
 
     &:not(.nav-open) {
-      left:-100vw;
+      left: -100vw;
       overflow: hidden;
     }
   }
@@ -89,6 +89,7 @@ body.has-menu {
 
 .mobile-menu-content {
   @media all and (max-width: 1023.98px) {
+    padding-top: 5vh;
     padding-left: calc(var(--padding-size-uxl) * 2);
   }
 
@@ -97,6 +98,7 @@ body.has-menu {
   }
 
   @media all and (max-height: 568px) {
+    padding-top: 3vh;
     padding-left: var(--padding-size-md);
   }
 }
@@ -167,16 +169,6 @@ body.has-menu {
   }
 }
 
-.mobile-menu-content {
-  @media all and (max-width: 1023.98px) {
-    padding-top: 5vh;
-  }
-
-  @media all and (max-height: 568px) {
-    padding-top: 3vh;
-  }
-}
-
 .mobile-menu-social-wrapper {
   display: none;
 
@@ -230,7 +222,6 @@ body.has-menu {
 }
 
 .hamburguer {
-  height: 100% !important;
   flex-direction: column;
   justify-content: center;
   align-content: center;

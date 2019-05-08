@@ -1,11 +1,10 @@
-
 .form-field .input-container,
 .form-field .input-container__text,
 .form-field .input-container__textarea,
 li.gfield .ginput_container_text,
 li.gfield .ginput_container_textarea {
   position: relative;
-  z-index: 3
+  z-index: 3;
 }
 
 .form-field .input-container:before,
@@ -23,7 +22,7 @@ li.gfield .ginput_container_textarea:before {
   -webkit-transition: width var(--transition-fast) var(--transition-easing);
   -o-transition: width var(--transition-fast) var(--transition-easing);
   transition: width var(--transition-fast) var(--transition-easing);
-  z-index: 2
+  z-index: 2;
 }
 
 .form-field .input-container:after,
@@ -41,21 +40,21 @@ li.gfield .ginput_container_textarea:after {
   -webkit-transition: width var(--transition-fast) var(--transition-easing);
   -o-transition: width var(--transition-fast) var(--transition-easing);
   transition: width var(--transition-fast) var(--transition-easing);
-  z-index: 1
+  z-index: 1;
 }
 
 .form-field.has-data .input-container__text:before,
 .form-field:focus-within .input-container__text:before,
 li.gfield.has-data .ginput_container_text:before,
 li.gfield:focus-within .ginput_container_text:before {
-  width: 100%
+  width: 100%;
 }
 
 .form-field.has-data .input-container__textarea:before,
 .form-field:focus-within .input-container__textarea:before,
 li.gfield.has-data .ginput_container_textarea:before,
 li.gfield:focus-within .ginput_container_textarea:before {
-  width: 100%
+  width: 100%;
 }
 
 input[type=email],
@@ -70,22 +69,21 @@ li.gfield .ginput_container_text input {
   border: none;
   font-size: var(--font-size-xlg) !important;
   line-height: var(--form-line-height) !important;
-  color: var(--color-black)
+  color: var(--color-black);
 }
 
 li.gfield .ginput_container_textarea textarea,
 textarea {
   height: auto;
-  height: calc(var(--form-line-height)*var(--textarea-total-lines));
+  height: calc(var(--form-line-height) * var(--textarea-total-lines));
   margin: 0;
   padding: 0 !important;
   background-color: transparent;
   outline: none;
   border: none;
-  
   font-size: var(--font-size-xlg);
   line-height: var(--form-line-height);
-  color: var(--color-black)
+  color: var(--color-black);
 }
 
 input[type=email]:invalid,
@@ -97,14 +95,13 @@ input[type=text]:invalid {
   color: var(--color-red);
 }
 
-
 .form-field.has-error .input-container:before,
 .form-field.has-error .input-container__text:before,
 .form-field.has-error .input-container__textarea:before,
 li.gfield.gfield_error .ginput_container_text:before,
 li.gfield.gfield_error .ginput_container_textarea:before {
   width: 100%;
-  background-color: var(--color-red) !important
+  background-color: var(--color-red) !important;
 }
 
 .form-field.has-error .input-container__textarea input,
@@ -113,5 +110,5 @@ li.gfield.gfield_error .ginput_container_textarea:before {
 li.gfield.gfield_error .ginput_container_textarea input,
 li.gfield.gfield_error .ginput_container_text input {
   color: var(--color-red) !important;
-  border: none !important
+  border: none !important;
 }
