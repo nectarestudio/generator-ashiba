@@ -33,11 +33,12 @@ a:not(.link-wrapper):hover,
   align-items: center;
 }
 
-.swiper-container-autoheight, .swiper-container-autoheight .swiper-slide {
+.swiper-container-autoheight,
+.swiper-container-autoheight .swiper-slide {
   height: auto !important;
 }
 
-@media all and (min-width:1024px) {
+@media all and (min-width: 1024px) {
   .in-view {
     opacity: 0;
     transform: translateY(100px);
