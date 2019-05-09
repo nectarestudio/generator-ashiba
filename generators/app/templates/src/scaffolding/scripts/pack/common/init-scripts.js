@@ -31,5 +31,5 @@ export function initialize() {
   <% } %>
   $(window).on('load', function() {
     <% if (installinview === true) { %>inViewport('.inview--trigger', 90)<% } %>
-  }
+  })
 }
