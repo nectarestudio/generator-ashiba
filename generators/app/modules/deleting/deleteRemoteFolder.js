@@ -54,7 +54,7 @@ const processConfig = (cfg, context) => {
 
 const deleteRemote = () => {
   return {
-    deleting: context => {
+    deleting: (context) => {
       return new Promise((resolve) => {
         // Style
         const styleConfig = style(context)

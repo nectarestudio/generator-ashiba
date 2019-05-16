@@ -3,7 +3,7 @@ const extend = require('deep-extend')
 function addScriptDependencies(files = {}, context) {
   extend(files.pkg, {
     dependencies: {
-      "css-vars-ponyfill": "^1.16.4",
+      'css-vars-ponyfill': '^1.16.4'
     }
   })
 
@@ -11,7 +11,7 @@ function addScriptDependencies(files = {}, context) {
   if (context.props.installswiper === true) {
     extend(files.pkg, {
       dependencies: {
-        "swiper": "^4.5.0"
+        swiper: '^4.5.0'
       }
     })
   }
@@ -20,7 +20,7 @@ function addScriptDependencies(files = {}, context) {
   if (context.props.installselect2 === true) {
     extend(files.pkg, {
       dependencies: {
-        "select2": "^4.0.6-rc.1"
+        select2: '^4.0.6-rc.1'
       }
     })
   }
@@ -29,7 +29,7 @@ function addScriptDependencies(files = {}, context) {
   if (context.props.installgsap === true) {
     extend(files.pkg, {
       dependencies: {
-        "gsap": "^2.1.0"
+        gsap: '^2.1.0'
       }
     })
   }
@@ -38,7 +38,7 @@ function addScriptDependencies(files = {}, context) {
   if (context.props.installinview === true) {
     extend(files.pkg, {
       dependencies: {
-        "inview": "^0.0.14"
+        inview: '^0.0.14'
       }
     })
   }
@@ -47,7 +47,7 @@ function addScriptDependencies(files = {}, context) {
   if (context.props.installladda === true) {
     extend(files.pkg, {
       dependencies: {
-        "ladda": "^2.0.1"
+        ladda: '^2.0.1'
       }
     })
   }
@@ -56,42 +56,42 @@ function addScriptDependencies(files = {}, context) {
   if (context.props.installsmoothscroll === true) {
     extend(files.pkg, {
       dependencies: {
-        "smoothscroll-for-websites": "^1.4.9"
+        'smoothscroll-for-websites': '^1.4.9'
       }
     })
   }
 
   // Stylelint config
   extend(files.pkg, {
-    "stylelint": {
-      "extends": "stylelint-config-standard",
-      "rules": {
-        "no-empty-source": null,
-        "at-rule-no-unknown": [
+    stylelint: {
+      extends: 'stylelint-config-standard',
+      rules: {
+        'no-empty-source': null,
+        'at-rule-no-unknown': [
           true,
           {
-            "ignoreAtRules": [
-              "extend",
-              "at-root",
-              "debug",
-              "warn",
-              "error",
-              "if",
-              "else",
-              "for",
-              "each",
-              "while",
-              "mixin",
-              "include",
-              "content",
-              "return",
-              "function"
+            ignoreAtRules: [
+              'extend',
+              'at-root',
+              'debug',
+              'warn',
+              'error',
+              'if',
+              'else',
+              'for',
+              'each',
+              'while',
+              'mixin',
+              'include',
+              'content',
+              'return',
+              'function'
             ]
           }
         ],
-        "selector-pseudo-element-colon-notation": null,
-        "rule-empty-line-before": null,
-        "no-descending-specificity": null
+        'selector-pseudo-element-colon-notation': null,
+        'rule-empty-line-before': null,
+        'no-descending-specificity': null
       }
     }
   })
