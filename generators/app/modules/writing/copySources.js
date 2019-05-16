@@ -63,7 +63,7 @@ const processConfig = (cfg, context) => {
 
 const copySources = () => {
   return {
-    writing: context => {
+    writing: (context) => {
       return new Promise((resolve) => {
         // Style
         const styleConfig = style(context)
