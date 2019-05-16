@@ -16,10 +16,16 @@
   }
 }
 
+@media all and (min-width: 576px) {
+  .container {
+    padding-left: var(--padding-size-container);
+    padding-right: var(--padding-size-container);
+  }
+
 @media all and (max-width: 575.98px) {
   .container {
-    padding-left: var(--padding-size-base);
-    padding-right: var(--padding-size-base);
+    padding-left: var(--padding-size-container);
+    padding-right: var(--padding-size-container);
   }
 }
 
