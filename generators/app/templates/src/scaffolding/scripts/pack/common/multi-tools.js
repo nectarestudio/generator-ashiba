@@ -1,7 +1,7 @@
 export function getProperty(targetElement, propertyType) {
   let propertyValue, targetObject
   targetObject = $(document).find(targetElement)
-  propertyValue = parseInt($(targetObject).css(propertyType))
+  propertyValue = parseInt($(targetObject).css(propertyType), 10)
   return (propertyValue)
 }
 

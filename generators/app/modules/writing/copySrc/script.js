@@ -1,4 +1,4 @@
-const script = context => {
+const script = function() {
   return {
     files: [
       {

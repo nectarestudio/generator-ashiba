@@ -1,4 +1,4 @@
-const styles = context => {
+const styles = function() {
   return {
     files: [
       {

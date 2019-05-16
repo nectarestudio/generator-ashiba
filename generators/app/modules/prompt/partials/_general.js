@@ -1,6 +1,6 @@
 const message = require('../helpers/message')
 
-const generalPrompts = context => {
+const generalPrompts = function() {
   return [
     {
       type: 'list',
