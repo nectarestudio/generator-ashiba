@@ -61,9 +61,12 @@ module.exports = class extends Generator {
     await Promise.all(
       Object.keys(this.commands).map(command => {
         return commandExists(command)
-        .then(commandResult => {
-          this.commands[commandResult] = true
-        })
+          .then(commandResult => {
+            this.commands[commandResult] = true
+          })
+          .catch(error => {
+            console.log(error)
+          }) 
       })
     )
   }
