@@ -19,8 +19,8 @@ npm install -g generator-ashiba
 Generate your new project:
 
 ```bash
-composer project-name roots/sage
-cd project-name
+composer create-project roots/sage your-theme-name
+cd your-theme-name
 yarn
 ```
 
