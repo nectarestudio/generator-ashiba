@@ -147,6 +147,7 @@ module.exports = class extends Generator {
     if (process.env.NODE_ENV !== 'test') {
       clear()
     }
+  
     var footerMessage = gradient.retro(`
                                     dP       oo dP                                 
                                     88          88                                 

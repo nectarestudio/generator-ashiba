@@ -56,6 +56,7 @@ const processConfig = (cfg, context) => {
   for (const file of cfg.files) {
     checkCondition(file, context)
   }
+
   for (const folder of cfg.folders) {
     checkCondition(folder, context)
   }
