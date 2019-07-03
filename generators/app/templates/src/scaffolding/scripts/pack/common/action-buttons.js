@@ -2,10 +2,10 @@ import { mobileMenu } from './mobile-menu'
 import { modalControl } from './modal-control'
 
 export function actionButtonsControl(trigger) {
-  if (document.getElementsByClassName(trigger).length !== 0) {
-  let triggerButton = document.getElementsByClassName(trigger)
+  if (document.querySelectorAll(trigger).length !== 0) {
+    let triggerButtons = document.querySelectorAll(trigger)
 
-    Array.prototype.forEach.call(triggerButton, function(element) {
+    Array.prototype.forEach.call(triggerButtons, function(element) {
       element.addEventListener('click', actionControl, false)
     })
   } else {

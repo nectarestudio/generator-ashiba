@@ -1,5 +1,38 @@
+:root {
+  // Container Width Value
+  --max-container-width: 1440px;
+  // Calculated by wrapperWidth() script. Initial value must be equal to --max-container-width
+  --container-width: 1440px;
+  // Available container width
+  --max-computed-width: calc(var(--container-width) - (var(--grid-gap) * 2));
+  // Global grid gap value
+  --grid-gap: 0;
+}
+
 body {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--container-width);
+  max-width: var(--container-width);
+  background-color: var(--color-black);
+}
+
+.main-grid {
+  width: var(--max-computed-width);
+  max-width: var(--max-computed-width);
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: var(--grid-gap);
 }
 
 header .container,
@@ -9,8 +42,26 @@ article .container {
   height: 100%;
 }
 
+header .container-fluid,
+footer .container-fluid,
+section .container-fluid,
+article .container-fluid {
+  height: 100%;
+}
+
+.section-block {
+  display: block;
+  width: inherit;
+  height: auto;
+}
+
 .link-wrapper {
   display: block;
+  height: inherit;
+}
+
+.link-wrapper.--is-dissabled {
+  pointer-events: none;
 }
 
 a:not(.link-wrapper),
@@ -33,9 +84,25 @@ a:not(.link-wrapper):hover,
   align-items: center;
 }
 
+.block-separator {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1rem;
+  background-color: var(--color-white);
+}
+
 .swiper-container-autoheight,
 .swiper-container-autoheight .swiper-slide {
   height: auto !important;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 @media all and (min-width: 1024px) {

@@ -30,13 +30,13 @@ export function getOffset(targetElement, offsetType) {
 }
 
 export function getDimensions(targetElement, dimensionType) {
-  let dimensionValue, targetObject
-  targetObject = $(targetElement)[0].getBoundingClientRect()
+  let dimensionValue, targetDimension
+  targetDimension = targetElement.getBoundingClientRect()
   if (dimensionType == 'width') {
-    dimensionValue = targetObject.width
+    dimensionValue = targetDimension.width
   }
   if (dimensionType == 'height') {
-    dimensionValue = targetObject.height
+    dimensionValue = targetDimension.height
   }
   return (dimensionValue)
 }
@@ -50,4 +50,10 @@ export function setOffset(targetElement, offsetTop, offsetleft) {
     top: offsetTop,
     left: offsetleft,
   })
+}
+
+export function removeClassByPrefix(targetElement, prefixString) {
+  var regExpObject = new RegExp('\\b' + prefixString + '\\w+', 'g');
+  targetElement.className = targetElement.className.replace(regExpObject, '');
+  return targetElement;
 }

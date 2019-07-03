@@ -12,8 +12,18 @@ export function swiperBasicInit(
   if ($(mainContainer).length !== 0) {
     swiperBasicObject = new Swiper(mainContainer, {
       // Optional parameters
+      // Disable preloading of all images
+      preloadImages: false,
+      // Enable lazy loading
+      lazy: {
+        loadPrevNext: true,
+        loadPrevNextAmount: 1,
+        loadOnTransitionStart: true,
+      },
       direction: swiperDirection,
       slidesPerView: 1,
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
       loop: loopValue,
       speed: 600,
       parallax: false,
@@ -61,14 +71,24 @@ export function swiperMultiInit(
   if ($(mainContainer).length !== 0) {
     swiperMultiObject = new Swiper(mainContainer, {
       // Optional parameters
+      // Disable preloading of all images
+      preloadImages: false,
+      // Enable lazy loading
+      lazy: {
+        loadPrevNext: true,
+        loadPrevNextAmount: 1,
+        loadOnTransitionStart: true,
+      },
       direction: swiperDirection,
-      slidesPerView: 2.5,
+      slidesPerView: '4',
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
       loop: loopValue,
       loopAdditionalSlides: 1,
       speed: 600,
       parallax: false,
       spaceBetween: slidesGap,
-      autoHeight: true,
+      autoHeight: false,
       autoplay: {
         delay: 7000,
       },
@@ -83,28 +103,20 @@ export function swiperMultiInit(
         hiddenClass: 'is-hidden',
       },
       breakpoints: {
-        1920: {
-          slidesPerView: 2.5,
+        771: {
+          slidesPerView: 1,
         },
-        1600: {
+        1107: {
           slidesPerView: 2,
         },
-        1440: {
-          slidesPerView: 1.5,
+        1379: {
+          slidesPerView: 3,
         },
-        768: {
-          slidesPerView: 1,
+        1579: {
+          slidesPerView: 4,
         },
       },
     });
-    $(window).on('load', function () {
-      swiperMultiObject.update()
-    })
-
-    $(window).on('resize', function () {
-      swiperMultiObject.update()
-    })
-
     return swiperMultiObject
   } else {
     console.log('swiperMultiInit target not found')
