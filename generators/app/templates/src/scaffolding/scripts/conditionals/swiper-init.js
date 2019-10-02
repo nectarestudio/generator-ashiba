@@ -1,4 +1,5 @@
-import Swiper from 'swiper';
+import Swiper from 'swiper'
+import { initLoadNResize } from '../common/tools/load-n-resize'
 
 export function swiperBasicInit(
   mainContainer,
@@ -9,7 +10,7 @@ export function swiperBasicInit(
   prevButton,
   nextButton
 ) {
-  if ($(mainContainer).length !== 0) {
+  if (document.querySelector(mainContainer).length !== 0) {
     swiperBasicObject = new Swiper(mainContainer, {
       // Optional parameters
       // Disable preloading of all images
@@ -43,14 +44,14 @@ export function swiperBasicInit(
         hiddenClass: 'is-hidden',
       },
     });
-    $(window).on('load', function () {
-      swiperBasicObject.update()
-    })
 
-    $(window).on('resize', function () {
-      swiperBasicObject.update()
-      console.log('resize')
-    })
+    var functionsArray = [
+      function() {
+        swiperBasicObject.update()
+      },
+    ]
+
+    initLoadNResize(functionsArray)
 
     return swiperBasicObject
   } else {
@@ -68,7 +69,7 @@ export function swiperMultiInit(
   prevButton,
   nextButton
 ) {
-  if ($(mainContainer).length !== 0) {
+  if (document.querySelector(mainContainer).length !== 0) {
     swiperMultiObject = new Swiper(mainContainer, {
       // Optional parameters
       // Disable preloading of all images

@@ -1,12 +1,14 @@
-export function modalControl(action, target, bodyClass) {
+export function modalControl(action, targetElement, bodyClass) {
+  let targeObject = document.querySelector(targetElement)
+  let bodyObject = document.querySelector('body')
   if (action === 'openModal') {
-    $(target).toggleClass('is-open')
-    $('body').toggleClass(bodyClass)
+    targeObject.classList.toggle('is-open')
+    targeObject.classList.toggle(bodyClass)
   }
 
   if (action === 'closeModal') {
-    $(target).toggleClass('is-open')
-    $('body').toggleClass(bodyClass)
+    targeObject.classList.toggle('is-open')
+    targeObject.classList.toggle(bodyClass)
   }
 }
 

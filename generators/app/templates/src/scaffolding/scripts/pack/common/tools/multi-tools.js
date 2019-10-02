@@ -1,13 +1,13 @@
 export function getProperty(targetElement, propertyType) {
   let propertyValue, targetObject
-  targetObject = $(document).find(targetElement)
-  propertyValue = parseInt($(targetObject).css(propertyType), 10)
+  targetObject = document.querySelector(targetElement)
+  propertyValue = parseInt(targetObject.style.propertyType, 10)
   return (propertyValue)
 }
 
 export function getPosition(targetElement, positionType) {
   let positionValue, targetObject
-  targetObject = $(targetElement).position()
+  targetObject = document.querySelector(targetElement).position()
   if (positionType == 'left') {
     positionValue = targetObject.left
   }
@@ -19,7 +19,7 @@ export function getPosition(targetElement, positionType) {
 
 export function getOffset(targetElement, offsetType) {
   let offsetValue, targetObject
-  targetObject = $(targetElement).offset()
+  targetObject = document.querySelector(targetElement).offset()
   if (offsetType == 'left') {
     offsetValue = targetObject.left
   }
@@ -42,11 +42,12 @@ export function getDimensions(targetElement, dimensionType) {
 }
 
 export function setProperty(targetElement, propertyType, propertyValue) {
-  $(targetElement).css(propertyType, propertyValue)
+  let targetObject = document.querySelector(targetElement)
+  targetObject.style.propertyType = propertyValue
 }
 
 export function setOffset(targetElement, offsetTop, offsetleft) {
-  $(targetElement).offset({
+  document.querySelector(targetElement).offset({
     top: offsetTop,
     left: offsetleft,
   })

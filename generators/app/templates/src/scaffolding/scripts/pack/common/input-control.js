@@ -1,27 +1,27 @@
-export function inputInit(targetElement) {
-  if ($(targetElement).length !== 0) {
-    $(targetElement).each(function () {
-      let targetParent = $(targetElement).closest('.form-field')
-      if (targetElement.value !== '') {
-        $(targetParent).addClass('has-data')
+export function inputInit(triggerElement, inputMode) {
+  if (document.querySelectorAll(triggerElement).length !== 0) {
+    let targetObject = document.querySelectorAll(triggerElement)
+    let targetClass
+
+    Array.prototype.forEach.call(targetObject, function (targetElement) {
+      if (inputMode === 'gravity') {
+        targetClass = '.gfield'
+      } else {
+        targetClass = '.form-field'
       }
+      let targetParent = targetElement.vanillaClosest(targetClass, function (returnElement) {
+        if (targetElement.value !== '') {
+          targetParent.classList.add('has-data')
+        }
+        return returnElement.className === targetClass
+      })
     })
   } else {
-    console.log('inViewport target not found')
+    console.log('inputInit target not found')
     return
   }
 }
 
-export function inputInitGravity(targetElement) {
-  if ($(targetElement).length !== 0) {
-    $(targetElement).each(function () {
-      let targetParent = $(targetElement).closest('.gfield')
-      if (targetElement.value !== '') {
-        $(targetParent).addClass('has-data')
-      }
-    })
-  } else {
-    console.log('inViewport target not found')
-    return
-  }
+export function vanillaClosest(targetElement, functionObject) {
+  return targetElement && (functionObject(targetElement) ? targetElement : vanillaClosest(targetElement.parentNode, functionObject))
 }

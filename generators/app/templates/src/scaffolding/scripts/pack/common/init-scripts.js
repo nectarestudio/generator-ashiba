@@ -12,7 +12,7 @@ export function initialize() {
   actionButtonsControl('click--trigger')
 
   // Selector background-image loader as data
-  dataBackground('.background--trigger')
+  dataBackground('.background--trigger', 'background')
 
   <% if (installsmoothscroll === true) { %>
     var scroll = new LocomotiveScroll({

@@ -1,12 +1,14 @@
 export function mobileMenu(menuTarget, action) {
-  if ($(menuTarget).length !== 0) {
+  if (document.querySelector(menuTarget).length !== 0) {
+    let menuObject = document.querySelector(menuTarget)
+    let bodyObject = document.querySelector('body')
     if (action == 'open') {
-      $(menuTarget).addClass('nav-open')
-      $('body').addClass('has-menu')
+      menuObject.classList.add('nav-open')
+      bodyObject.classList.add('has-menu')
     }
     if (action == 'close') {
-      $(menuTarget).removeClass('nav-open')
-      $('body').removeClass('has-menu')
+      menuObject.classList.remove('nav-open')
+      bodyObject.classList.remove('has-menu')
     }
   } else {
     console.log('mobileMenu menuTarget not found')
