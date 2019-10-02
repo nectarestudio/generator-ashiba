@@ -1,38 +1,8 @@
-:root {
-  // Container Width Value
-  --max-container-width: 1440px;
-  // Calculated by wrapperWidth() script. Initial value must be equal to --max-container-width
-  --container-width: 1440px;
-  // Available container width
-  --max-computed-width: calc(var(--container-width) - (var(--grid-gap) * 2));
-  // Global grid gap value
-  --grid-gap: 0;
-}
-
 body {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.main-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: var(--container-width);
-  max-width: var(--container-width);
-  background-color: var(--color-black);
-}
-
-.main-grid {
-  width: var(--max-computed-width);
-  max-width: var(--max-computed-width);
-  height: auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-row-gap: var(--grid-gap);
 }
 
 header .container,

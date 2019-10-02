@@ -56,7 +56,7 @@ function addScriptDependencies(files = {}, context) {
   if (context.props.installsmoothscroll === true) {
     extend(files.pkg, {
       dependencies: {
-        'smoothscroll-for-websites': '^1.4.9'
+        'locomotive-scroll': '^3.1.7'
       }
     })
   }
