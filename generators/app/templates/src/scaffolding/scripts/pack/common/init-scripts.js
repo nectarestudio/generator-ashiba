@@ -16,7 +16,7 @@ export function initialize() {
 
   <% if (installsmoothscroll === true) { %>
     var scroll = new LocomotiveScroll({
-      el: document.querySelector('.wrapper'),
+      el: document.querySelector('.content-wrapper'),
       smooth: true
   })
   <% } %>

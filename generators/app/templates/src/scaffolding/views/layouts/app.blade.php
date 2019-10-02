@@ -4,9 +4,8 @@
   <body @php body_class() @endphp>
     @php do_action('get_header') @endphp
     @include('partials.header')
-    <div class="wrapper" role="document">
-      <div class="content">
-        <main class="main">
+    <div class="content-wrapper" role="document">>
+        <main class="main-content">
           @yield('content')
         </main>
         @if (App\display_sidebar())
@@ -14,7 +13,6 @@
             @include('partials.sidebar')
           </aside>
         @endif
-      </div>
     </div>
     @php do_action('get_footer') @endphp
     @include('partials.footer')
