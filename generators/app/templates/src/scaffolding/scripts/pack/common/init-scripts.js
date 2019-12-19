@@ -1,8 +1,7 @@
 /* eslint-disable */
 import { detectAdminBar } from './detect-wp-bar'
 import { actionButtonsControl } from './action-buttons'
-<% if (installinview === true) { %>import { inViewport } from './in-viewport'<% } %>
-<% if (installsmoothscroll === true) { %>import { LocomotiveScroll } from 'locomotive-scroll'<% } %>
+<% if (installsmoothscroll === true) { %>import LocomotiveScroll from 'locomotive-scroll'<% } %>
 
 export function initialize() {
   // Detect if wp admin bar is active
@@ -20,7 +19,4 @@ export function initialize() {
       smooth: true
   })
   <% } %>
-  $(window).on('load', function() {
-    <% if (installinview === true) { %>inViewport('.inview--trigger', 90)<% } %>
-  })
 }
