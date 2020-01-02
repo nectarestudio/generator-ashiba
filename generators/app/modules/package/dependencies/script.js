@@ -1,6 +1,6 @@
 const extend = require('deep-extend')
 
-function addScriptDependencies(files = {}, context) {
+function addScriptDependencies(context, files = {}) {
   extend(files.pkg, {
     dependencies: {
       'css-vars-ponyfill': '^1.16.4'
