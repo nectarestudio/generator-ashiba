@@ -1,5 +1,8 @@
 @charset 'UTF-8';
 
+// Import grid
+@import "grid/grid";
+
 @import "variables";
 
 /** Import fonts first to prevent FOUC / FOUT */

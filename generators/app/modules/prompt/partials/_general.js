@@ -87,7 +87,7 @@ const generalPrompts = function() {
       name: 'installsmoothscroll',
       message: message({
         headline: 'Install dependency: Smoothscroll',
-        description: 'Install npm package locomotive-scroll?',
+        description: 'Install npm package smoothscroll?',
         defaultValue: false
       }),
       choices: [
