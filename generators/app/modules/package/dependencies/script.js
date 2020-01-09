@@ -1,6 +1,6 @@
 const extend = require('deep-extend')
 
-function addScriptDependencies(files = {}, context) {
+function addScriptDependencies(context, files = {}) {
   extend(files.pkg, {
     dependencies: {
       'css-vars-ponyfill': '^1.16.4'
@@ -11,16 +11,16 @@ function addScriptDependencies(files = {}, context) {
   if (context.props.installswiper === true) {
     extend(files.pkg, {
       dependencies: {
-        swiper: '^4.5.0'
+        swiper: '^5.0.0'
       }
     })
   }
 
-  // Select2
-  if (context.props.installselect2 === true) {
+  // Choices
+  if (context.props.installchoices === true) {
     extend(files.pkg, {
       dependencies: {
-        select2: '^4.0.6-rc.1'
+        'choices.js': '^9.0.1'
       }
     })
   }
@@ -56,7 +56,7 @@ function addScriptDependencies(files = {}, context) {
   if (context.props.installsmoothscroll === true) {
     extend(files.pkg, {
       dependencies: {
-        'locomotive-scroll': '^3.1.7'
+        'smoothscroll-for-websites': '^1.4.10'
       }
     })
   }

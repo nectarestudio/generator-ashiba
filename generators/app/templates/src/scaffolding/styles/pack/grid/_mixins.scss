@@ -1,0 +1,116 @@
+// Media query Mixins
+// UXXL Breakpoint
+@mixin breakpoint-min-uxxl {
+  @media screen and (min-width: #{$breakpoint-uxxl}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-uxxl {
+  @media screen and (max-width: #{$breakpoint-max-uxxl}) {
+    @content;
+  }
+}
+
+// UXL Breakpoint
+@mixin breakpoint-min-uxl {
+  @media screen and (min-width: #{$breakpoint-uxl}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-uxl {
+  @media screen and (max-width: #{$breakpoint-max-uxl}) {
+    @content;
+  }
+}
+
+// XXL Breakpoint
+@mixin breakpoint-min-xxl {
+  @media screen and (min-width: #{$breakpoint-xxl}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-xxl {
+  @media screen and (max-width: #{$breakpoint-max-xxl}) {
+    @content;
+  }
+}
+
+// XL Breakpoint
+@mixin breakpoint-min-xl {
+  @media screen and (min-width: #{$breakpoint-xl}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-xl {
+  @media screen and (max-width: #{$breakpoint-max-xl}) {
+    @content;
+  }
+}
+
+// Base Breakpoint
+@mixin breakpoint-min-base {
+  @media screen and (min-width: #{$breakpoint-base}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-base {
+  @media screen and (max-width: #{$breakpoint-max-base}) {
+    @content;
+  }
+}
+// LG Breakpoint
+@mixin breakpoint-min-lg {
+  @media screen and (min-width: #{$breakpoint-lg}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-lg {
+  @media screen and (max-width: #{$breakpoint-max-lg}) {
+    @content;
+  }
+}
+
+// MD Breakpoint
+@mixin breakpoint-min-md {
+  @media screen and (min-width: #{$breakpoint-md}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-md {
+  @media screen and (max-width: #{$breakpoint-max-md}) {
+    @content;
+  }
+}
+
+// SM Breakpoint
+@mixin breakpoint-min-sm {
+  @media screen and (min-width: #{$breakpoint-sm}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-sm {
+  @media screen and (max-width: #{$breakpoint-max-sm}) {
+    @content;
+  }
+}
+
+// XS Breakpoint
+@mixin breakpoint-min-xs {
+  @media screen and (min-width: #{$breakpoint-xs}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-xs {
+  @media screen and (max-width: #{$breakpoint-max-xs}) {
+    @content;
+  }
+}

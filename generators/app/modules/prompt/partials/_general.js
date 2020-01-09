@@ -24,10 +24,10 @@ const generalPrompts = function() {
     },
     {
       type: 'list',
-      name: 'installselect2',
+      name: 'installchoices',
       message: message({
-        headline: 'Install dependency: Select2',
-        description: 'Install npm package select2?',
+        headline: 'Install dependency: Choices',
+        description: 'Install npm package Choices?',
         defaultValue: false
       }),
       choices: [

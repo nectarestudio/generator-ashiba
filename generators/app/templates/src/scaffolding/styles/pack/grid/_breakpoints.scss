@@ -1,0 +1,88 @@
+:root {
+  --grid-columns: 12;
+  --padding-size-container: 1.875rem; // 30px
+  --column-width: calc(((100vw) - (var(--padding-size-container) *2)) / var(--grid-columns));
+
+  // Container Breakpoints
+  --breakpoint-xs: 448px;
+  --breakpoint-sm: 596px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1440px;
+  --breakpoint-uxl: 1600px;
+  --breakpoint-uxxl: 1920px;
+
+  // Media query max-width breakpoints
+  --breakpoint-max-sm: calc(var(--breakpoint-sm) - 0.02px);
+  --breakpoint-max-md: calc(var(--breakpoint-md) - 0.02px);
+  --breakpoint-max-lg: calc(var(--breakpoint-lg) - 0.02px);
+  --breakpoint-max-xl: calc(var(--breakpoint-xl) - 0.02px);
+  --breakpoint-max-xxl: calc(var(--breakpoint-xxl) - 0.02px);
+  --breakpoint-max-uxl: calc(var(--breakpoint-uxl) - 0.02px);
+  --breakpoint-max-uxxl: calc(var(--breakpoint-uxxl) - 0.02px);
+
+  // Container max-width
+  --container-max-width-sm: 540px;
+  --container-max-width-md: 688px;
+  --container-max-width-lg: 936px;
+  --container-max-width-xl: 1140px;
+  --container-max-width-xxl: 1360px;
+  --container-max-width-uxl: 1560px;
+  --container-max-width-uxxl: 1680px;
+  --container-width: calc((100vw) - (var(--padding-size-container) *2));
+
+  // Non-grid breakpoint
+  --breakpoint-base: $breakpoint-base;
+  --breakpoint-max-base: calc(var(--breakpoint-base) - 0.02px);
+
+  // Media querys
+
+  // XS Breakpoint
+  @include breakpoint-min-xs {
+    --column-width: calc(((100vw) - (var(--padding-size-container) *2)) / var(--grid-columns));
+    --container-width: calc((100vw) - (var(--padding-size-container) *2));
+  }
+
+  // SM Breakpoint
+  @include breakpoint-min-sm {
+    --column-width: calc(((100vw) - (var(--padding-size-container) *2)) / var(--grid-columns));
+    --container-width: calc((100vw) - (var(--padding-size-container) *2));
+  }
+
+  // MD Breakpoint
+  @include breakpoint-min-md {
+    --column-width: calc(var(--container-max-width-md) / var(--grid-columns));
+    --container-width: var(--container-max-width-md);
+  }
+
+  // LG Breakpoint
+  @include breakpoint-min-lg {
+    --column-width: calc(var(--container-max-width-lg) / var(--grid-columns));
+    --container-width: var(--container-max-width-lg);
+  }
+
+  // XL Breakpoint
+  @include breakpoint-min-xl {
+    --column-width: calc(var(--container-max-width-xl) / var(--grid-columns));
+    --container-width: var(--container-max-width-xl);
+  }
+
+  // XXL Breakpoint
+  @include breakpoint-min-xxl {
+    --column-width: calc(var(--container-max-width-xxl) / var(--grid-columns));
+    --container-width: var(--container-max-width-xxl);
+  }
+
+  // UXL Breakpoint
+  @include breakpoint-min-uxl {
+    --column-width: calc(var(--container-max-width-uxl) / var(--grid-columns));
+    --container-width: var(--container-max-width-uxl);
+  }
+
+  // UXXL Breakpoint
+  @include breakpoint-min-uxxl {
+    --column-width: calc(var(--container-max-width-uxxl) / var(--grid-columns));
+    --container-width: var(--container-max-width-uxxl);
+  }
+}

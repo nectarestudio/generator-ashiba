@@ -17,7 +17,7 @@ const writePackageJson = () => {
         // Apply Data to JSON-String
         // ============================
 
-        addScriptDependencies({ pkg }, context)
+        addScriptDependencies(context, { pkg })
 
         // Sort package.json data
         pkg = sortPackageJson(pkg)

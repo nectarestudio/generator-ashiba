@@ -1,0 +1,33 @@
+// Container Breakpoints
+$breakpoint-xs: 448px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1440px;
+$breakpoint-uxl: 1600px;
+$breakpoint-uxxl: 1920px;
+
+// Non Grid breakpoint
+$breakpoint-base: 1024px;
+
+// Container Max Width
+$container-max-width-sm: 540px; // 36px
+$container-max-width-md: 688px; // 80px
+$container-max-width-lg: 936px; // 56px
+$container-max-width-xl: 1140px; // 60px
+$container-max-width-xxl: 1360px; // 80px
+$container-max-width-uxl: 1560px; // 40px
+$container-max-width-uxxl: 1680px; // 240px
+
+// Media query max-width breakpoints
+$breakpoint-max-xs: $breakpoint-xs - 0.02px;
+$breakpoint-max-sm: $breakpoint-sm - 0.02px;
+$breakpoint-max-md: $breakpoint-md - 0.02px;
+$breakpoint-max-lg: $breakpoint-lg - 0.02px;
+$breakpoint-max-base: $breakpoint-base - 0.02px;
+$breakpoint-max-xl: $breakpoint-xl - 0.02px;
+$breakpoint-max-xxl: $breakpoint-xxl - 0.02px;
+$breakpoint-max-uxl: $breakpoint-uxl - 0.02px;
+$breakpoint-max-uxxl: $breakpoint-uxxl - 0.02px;
+$breakpoint-max-base: $breakpoint-base - 0.02px;
