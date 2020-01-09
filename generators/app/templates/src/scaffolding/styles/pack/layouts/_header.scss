@@ -121,7 +121,7 @@ body.has-menu {
   a {
     position: relative;
     font-size: var(--font-size-base);
-    font-weight: $font-weight-normal;
+    font-weight: var(--font-weight-base);
     line-height: var(--line-height-xl);
     color: var(--color-black);
     z-index: 100;

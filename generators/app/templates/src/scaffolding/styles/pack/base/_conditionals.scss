@@ -1,34 +1,49 @@
-.is-bold {
-  font-weight: $font-weight-bold;
+.--is-bold {
+  font-weight: var(--font-weight-bold);
 }
 
-.is-invisible {
+.--is-invisible {
   display: none !important;
 }
 
-.is-hidden {
+.--is-hidden {
   visibility: hidden;
 }
 
-.click--trigger,
-.click--trigger * {
+.--no-padding-top {
+  padding-top: 0 !important;
+}
+
+.--no-padding-bottom {
+  padding-bottom: 0 !important;
+}
+
+.--no-padding {
+  padding-top: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+}
+
+.click-trigger,
+.click-trigger * {
   cursor: pointer;
 }
 
-.is-hidden-mobile {
+.--is-hidden-mobile {
   display: block;
 }
 
-.is-hidden-desktop {
+.--is-hidden-desktop {
   display: none;
 }
 
-@media screen and (max-width: 1023.98px) {
-  .is-hidden-mobile {
+@include breakpoint-max-base {
+  .--is-hidden-mobile {
     display: none;
   }
 
-  .is-hidden-desktop {
+  .--is-hidden-desktop {
     display: block;
   }
 }

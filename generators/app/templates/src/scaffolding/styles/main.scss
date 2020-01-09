@@ -3,6 +3,7 @@
 // Import grid
 @import "grid/grid";
 
+// Import variables
 @import "variables";
 
 /** Import fonts first to prevent FOUC / FOUT */
@@ -14,7 +15,7 @@
  * Prefix your imports with `~` to grab from node_modules/
  * @see https://github.com/webpack-contrib/sass-loader#imports
 */
-<% if (installswiper === true) { %>@import url("~swiper/dist/css/swiper.css");<% } %>
+<% if (installswiper === true) { %>@import url("~swiper/css/swiper.css");<% } %>
 <% if (installladda === true) { %>@import url("~ladda/dist/ladda.min.css");<% } %>
 
 /** Import base theme styles */
