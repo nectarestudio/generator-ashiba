@@ -14,6 +14,13 @@ const script = function() {
         },
         src: 'src/scaffolding/scripts/conditionals/in-viewport.js',
         dest: 'resources/assets/scripts/common/in-viewport.js'
+      },
+      {
+        conditions: {
+          installchoices: true
+        },
+        src: 'src/scaffolding/scripts/conditionals/select-control.js',
+        dest: 'resources/assets/scripts/common/controllers/select-control.js'
       }
     ],
     folders: [

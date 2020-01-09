@@ -1,13 +1,12 @@
 /* eslint-disable */
 import { initLoadNResize } from './tools/load-n-resize'
-import { interceptionObserverControl } from './tools/interception-control'
-import { actionButtonsControl } from './action-buttons'
+import { interceptionObserverControl } from './controllers/interception-control'
+import { actionButtonsControl } from './controllers/action-buttons'
 import { debugMode, debugInfo } from './tools/debug'
-import { inputInit } from './input-control'
-import { inputObserver, inputObserverGravity, selectObserver } from './tools/mutation-observer'
+import { inputInit } from './controllers/input-control'
+import { inputObserver, inputObserverGravity, selectObserver } from './controllers/mutation-observer'
 <% if (installinview === true) { %>import { inViewport } from './in-viewport'<% } %>
-import { selectControl } from './select-control'
-import { actionButtonsControl } from './action-buttons'
+<% if (installchoices === true) { %>import { selectControl } from './controllers/select-control'<% } %>
 <% if (installsmoothscroll === true) { %>import * as SmoothScroll from 'smoothscroll-for-websites'<% } %>
 
 export function initialize() {

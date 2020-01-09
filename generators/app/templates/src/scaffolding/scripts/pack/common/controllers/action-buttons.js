@@ -1,4 +1,4 @@
-import { mobileMenu } from './mobile-menu'
+import { mobileMenu } from '../mobile-menu'
 import { modalControl } from './modal-control'
 
 export function actionButtonsControl(trigger) {
