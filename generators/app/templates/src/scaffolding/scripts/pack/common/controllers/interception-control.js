@@ -45,6 +45,7 @@ function handleIntersect(entries) {
 
 function interceptionControl(triggerObject, observerStatus) {
   let actionType = triggerObject.getAttribute('data-action')
+  console.log(observerStatus)
   switch (actionType) {
     case '':
       break

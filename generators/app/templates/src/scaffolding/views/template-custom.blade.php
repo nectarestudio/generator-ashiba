@@ -5,9 +5,9 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="template-wrapper">
-    @while(have_posts()) @php the_post() @endphp
-      @include('partials.content-page')
-    @endwhile
-  </div>
+<main class="main-content">
+  @while(have_posts()) @php the_post() @endphp
+    @include('partials.content')
+  @endwhile
+</main>
 @endsection

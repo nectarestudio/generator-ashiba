@@ -3,7 +3,8 @@ const extend = require('deep-extend')
 function addScriptDependencies(context, files = {}) {
   extend(files.pkg, {
     dependencies: {
-      'css-vars-ponyfill': '^1.16.4'
+      'css-vars-ponyfill': '^1.16.4',
+      'intersection-observer': '^0.7.0'
     }
   })
 
